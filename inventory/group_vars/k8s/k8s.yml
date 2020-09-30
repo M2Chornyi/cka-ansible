@@ -1,5 +1,5 @@
 ansible_user: root
-ansible_ssh_pass: root
+ansible_ssh_pass: $6$OPt9d7Tev5yobJU3$0xvgcowErNyrjzd9ZoPOrSCyuHmHeoO/QmwzAJ2KQxeHkprLQ0VbAXxa.D4YEYraXDTgJ/pvWielbo6/95aFa/
 
 user_name: user
 user_id: 1100
