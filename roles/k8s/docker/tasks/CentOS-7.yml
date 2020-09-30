@@ -1,0 +1,39 @@
+---
+- name: "[CentOS-7] Docker installation"
+  yum:
+    name: ["vim","yum-utils","device-mapper-persistent-data","lvm2","git","bash-completion"]
+    state: latest
+
+- name: "[CentOS-7] Install Docker repo"
+  command:  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: "[CentOS-7] Install docker engine"
+  yum:
+    name: docker-ce
+    state: latest
+
+- name: "[CentOS-7] Create directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "/etc/docker"
+    - "/etc/systemd/system/docker.service.d"
+
+- name: "[CentOS-7] Setup docker configuration"
+  template:
+    src: templates/docker-daemon.json
+    dest: /etc/docker/daemon.json
+
+- name: "[CentOS-7] Docker service - "
+  systemd:
+    state: started
+    name: docker
+    daemon_reload: yes
+    enabled: yes
+
+- name: "[CentOS-7] Disable firewall"
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: no

@@ -1,0 +1,4 @@
+---
+- import_tasks: hosts.yml
+  when: ansible_os_family == "RedHat"
+

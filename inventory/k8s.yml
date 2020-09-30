@@ -1,0 +1,11 @@
+---
+k8s:
+  hosts:
+    master:
+      ansible_host: 192.168.2.100
+    node01:
+      ansible_host: 192.168.2.101
+    node02:
+      ansible_host: 192.168.2.102
+    node03:
+      ansible_host: 192.168.2.103

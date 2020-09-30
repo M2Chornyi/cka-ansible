@@ -1,0 +1,9 @@
+ansible_user: root
+ansible_ssh_pass: $6$OPt9d7Tev5yobJU3$0xvgcowErNyrjzd9ZoPOrSCyuHmHeoO/QmwzAJ2KQxeHkprLQ0VbAXxa.D4YEYraXDTgJ/pvWielbo6/95aFa/
+
+user_name: user
+user_id: 1100
+group_name: users
+group_id: 1100
+user_pass: $6$fUDGr6vEC.m2sNHn$k1O9flgou1VgHG5HHEQ0eTL8qGz23XP/bNIsy7aOrOwhgbIplZIn8DJrjfu32aoJe22KILHLy4I69pKfhtS1Z0
+groups_name: wheel

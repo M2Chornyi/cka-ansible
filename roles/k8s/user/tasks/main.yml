@@ -1,0 +1,22 @@
+---
+- name: Create User Group
+  group:
+    name: "{{ group_name }}"
+    gid: "{{ group_id }}"
+    state: present
+
+
+- name: Create User
+  user:
+    name: "{{ user_name }}"
+    uid: "{{ user_id }}"
+    group: "{{ group_name }}"
+    groups: "{{ groups_name }}"
+    password: "{{ user_pass }}"
+    state: present
+
+- name: Set sudo permissions
+  template:
+    src: templates/sudoers.d.j2
+    dest: "/etc/sudoers.d/{{ user_name }}"
+    mode: 0400
