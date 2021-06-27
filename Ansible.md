@@ -1,8 +1,12 @@
 # Ansible
+Set `ANSIBLE_CONFIG` variable:
+```shell
+export ANSIBLE_CONFIG=./ansible.cfg
+```
 
 To run Ansible with variable:
 ```bash
-ansible-playbook k8s.yml -e target=k8s
+ansible-playbook centos7.yml -e target=centos7
 ```
 
 Using password hash instead of plain password through [crypt](https://docs.python.org/3.4/library/crypt.html) module

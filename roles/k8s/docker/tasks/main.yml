@@ -5,3 +5,5 @@
 - import_tasks: CentOS-7.yml
   when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7")
 
+- import_tasks: Rocky-8.yml
+  when: (ansible_facts['distribution'] == "Rocky" and ansible_facts['distribution_major_version'] == "8")

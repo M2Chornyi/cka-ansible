@@ -1,0 +1,11 @@
+---
+rocky:
+  hosts:
+    rocky-master:
+      ansible_host: 192.168.2.200
+    rocky-node01:
+      ansible_host: 192.168.2.201
+#    rocky-node02:
+#      ansible_host: 192.168.2.102
+#    rocky-node03:
+#      ansible_host: 192.168.2.103

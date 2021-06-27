@@ -1,0 +1,19 @@
+---
+- name: "[Rocky-8] Docker installation"
+  dnf:
+    name: ["vim","dnf-utils","device-mapper-persistent-data","lvm2"]
+    state: latest
+
+- name: "[Rocky-8] Install Docker repo"
+  command:  dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: "[Rocky-8] Install docker engine"
+  dnf:
+    name: docker-ce
+    state: latest
+    install_weak_deps: yes
+
+- name: "[Rocky-8] Enable docker service"
+  service:
+    name: docker
+    state: started

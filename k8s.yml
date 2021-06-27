@@ -1,7 +1,7 @@
 ---
 - hosts: "{{ target }}"
   roles:
-    - k8s/docker
-    - k8s/kubetools
-    - k8s/hosts
-    - k8s/user
+    - { role: k8s/docker ,    tags: docker      }
+    - { role: k8s/kubetools , tags: kube-tools  }
+    - { role: k8s/hosts ,     tags: hosts       }
+    - { role: k8s/user ,      tags: user        }

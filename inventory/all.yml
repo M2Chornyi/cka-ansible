@@ -1,0 +1,5 @@
+---
+all:
+  children:
+    centos7:
+    rocky:
