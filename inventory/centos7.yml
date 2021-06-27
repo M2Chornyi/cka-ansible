@@ -1,11 +1,11 @@
 ---
-k8s:
+centos7:
   hosts:
-    master:
+    centos7-master:
       ansible_host: 192.168.2.100
-    node01:
+    centos7-node01:
       ansible_host: 192.168.2.101
-    node02:
+    centos7-node02:
       ansible_host: 192.168.2.102
-    node03:
+    centos7-node03:
       ansible_host: 192.168.2.103

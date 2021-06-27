@@ -1,0 +1,6 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.2.100 k8m km control control.example.com master c node-1 m controlplane
+192.168.2.101 k8w1 ks1 kw1 worker1 worker1.example.com w1 node-2 node01
+192.168.2.102 k8w2 ks2 kw2 worker2 worker2.example.com w2 node-3 node02
+192.168.2.103 k8w3 ks3 kw3 worker3 worker3.example.com w3 node-4 node03
