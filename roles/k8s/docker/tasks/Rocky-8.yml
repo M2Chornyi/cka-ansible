@@ -17,3 +17,9 @@
   service:
     name: docker
     state: started
+
+- name: "[Rocky-8] adding users to docker group"
+  user:
+    name: "{{ user_name }}"
+    groups: ["{{ groups_name }}","docker"]
+    state: present
